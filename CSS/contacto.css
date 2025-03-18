@@ -26,7 +26,7 @@ main h2 {
     justify-content: space-between;
     align-items: flex-start;
     gap: 5%;
-    height: 70vh;
+    height: 75vh;
 }
 
 /*Caja informativa*/
@@ -139,13 +139,6 @@ main h2 {
 .social-container a#whatsapp{
     right: 80%;
     top: 23%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 .form {
