@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes slide {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+}
+
+.slider_box {
+    background-color: rgb(36, 38, 43);
+    margin: 30px 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliders_container {
+    display: flex;
+    width: 400%;
+    animation: slide linear infinite 15s;
+}
+
+.active_slider, .inactive_slider {
+    display: flex;
+    align-items: stretch;
+    max-height: 500px;
+}
+
+.slider h2{
+    padding-top: 2%;
+    color: rgb(186, 113, 40);
+    font-size: 35px;
+    text-align: center;
+}
+
+.slider p {
+    color: rgb(137, 131, 123);
+    font-size: large;
+    font-weight: bold;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.slider p:nth-child(3) {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-weight: normal;
+    padding:1.5%;
+}
+
+.slider a{
+    color: white;
+    background-color: black;
+    font-weight: 500;
+    display: flex;
+    align-self: center;
+    gap:12px;
+    padding: 15px;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider a:hover{
+    color: #C07631;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 60px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider1Img, .slider2Img {
+    display: flex;
+    width: 30%;
+}
+
+.sliderImg > img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+/*Sneaker box*/
+.sneaker {
+    padding: 20px 0px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.sneaker_text {
+    padding: 10px 5px;
+    width: 41%;
+    display: inline-block;
+}
+
+.sneaker_text h2 {
+    margin-bottom: 12px;
+    font-size: xx-large;
+    color: rgb(186, 113, 40);
+}
+
+.sneaker_text > p:nth-child(2) {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.sneaker_text > p:nth-child(3) {
+    font-size: 12px;
+}
+
+.sneaker_text a {
+    color: white;
+    background-color: black;
+    margin-top: 30px;
+    padding: 2%;
+    gap:12px;
+    width: 160px;
+    display: flex;
+    justify-self: end;
+    transition: all 0.3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.sneaker_text a:hover{
+    color: #C07631;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.sneaker_images {
+    width: 56%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sneaker_images div {
+    position: relative;
+    width: 32%;
+    min-width: 190px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+} 
+
+.sneaker_images div img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/*Search icon*/
+.sneaker_images div::after {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sneaker_images div:hover img {
+    transform: scale(1.1);
+}
+
+.sneaker_images div:hover::after {
+    opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .sliders_container {
+        width: 200%;
+    }
+
+    .slider {
+        width: 80%;
+        padding: 40px 10px;
+    }
+
+    .sneaker {
+        flex-direction: column;
+    }
+
+    .sneaker_text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sneaker_images {
+        width: 100%;
+    }
+
+    .sneaker_text a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .sliders_container {
+        width: 300%;
+    }
+
+    .slider p:nth-child(3) {
+        display: none;
+    }
+
+    .slider {
+        width: 90%;
+        padding: 20px 10px;
+    }
+
+    .sneaker {
+        flex-direction: column;
+    }
+
+    .sneaker_text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sneaker_images {
+        width: 100%;
+    }
+
+    .sneaker_text a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider p {
+        font-size: 14px;
+    }
+}
