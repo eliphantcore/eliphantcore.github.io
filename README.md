@@ -5,3 +5,5 @@ Para las estrellas se ha creado un archivo JS, el cual se encarga de manejar la 
 Cuando una estrella es clickeada, el código obtiene su atributo data-value, que indica su posición dentro del sistema de calificación. A partir de ahí, recorre todas las estrellas y compara su índice con el valor seleccionado. Si el índice es menor que el valor obtenido, la estrella recibe la clase 'active', resaltándola visualmente. Si el índice es igual o mayor, la clase 'active' se elimina, asegurando que solo las estrellas hasta la seleccionada permanezcan iluminadas.
 
 De esta forma, al hacer clic en cualquier estrella, todas las anteriores también se activan, creando un efecto intuitivo y dinámico que permite al usuario calificar su experiencia de manera visual.
+
+eliphantcore.github.io
